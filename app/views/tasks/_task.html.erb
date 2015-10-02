@@ -4,8 +4,12 @@
    <div class="panel panel-default">
       <div class="panel-heading">
       	<%= link_to edit_task_path(task) do %>
-      	Created <%= time_ago_in_words(task.created_at) %> ago</div>
+      	Created <%= time_ago_in_words(task.created_at) %> ago
       	<% end %>
+      	<%= link_to "X", task_path(task), method: :delete, data: {confirm: "Are you Sure?"}, class: "pull-right" %>
+      		</div>
+      	
+      	
       <div class="panel-body"><%= task.content %> </div>
       
       <div class="panel-footer text-center">
