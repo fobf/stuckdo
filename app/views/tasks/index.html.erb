@@ -1,4 +1,13 @@
-<p id="notice"><%= notice %></p>
+<p id="notice "><%= notice %></p>
+
+<div class="row text-center" style="margin-top:-40px">
+  <div class="col-sm-12">
+    <h2>You can begin by creating New task!</h2>
+    <p>Try adding video from youtube or image!</p>
+    <%= link_to 'New Task', new_task_path, class: "btn btn-primary btn-block" %>
+  </div>
+</div>
+
 
 <div class="row">
   <div class="col-sm-4">
@@ -21,4 +30,6 @@
 </div>
 
 <br>
-<%= link_to 'New Task', new_task_path %>
+
+
+
