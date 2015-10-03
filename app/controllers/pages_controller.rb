@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
   def home
-    if current_user
+  #  if current_user
       redirect_to tasks_url
-    end
+   # end
   end
   
   
