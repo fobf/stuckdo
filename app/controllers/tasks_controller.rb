@@ -8,9 +8,9 @@ class TasksController < ApplicationController
     #@doing = current_user.tasks.where(state: "doing")
     #@done = current_user.tasks.where(state: "done")
   def index
-    @to_do = Task.where(state: "to_do")
-    @doing = Task.where(state: "doing")
-    @done = Task.where(state: "done")
+    @to_do = Task.where(state: "to_do").order(created_at: :desc)
+    @doing = Task.where(state: "doing").order(created_at: :desc)
+    @done = Task.where(state: "done").order(created_at: :desc)
   end
 
   # GET /tasks/1
